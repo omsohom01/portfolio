@@ -1,0 +1,342 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d; /* Dark, immersive background */
+    color: #e6e6e6;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #222, #333); /* Sleek dark gradient */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #fca311;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.nav-link {
+    color: #e6e6e6;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #ff6f61;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav-link:hover {
+    color: #fca311;
+}
+
+/* Home Section with Background */
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#home .container {
+    z-index: 1;
+    position: relative;
+    color: #fff;
+    animation: fadeInUp 1.5s ease;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.typing-effect {
+    font-size: 2rem;
+    color: #ff6f61;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    color: #e6e6e6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid #ff6f61;
+    color: #ff6f61;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-radius: 30px;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #ff6f61;
+    color: #333;
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.6);
+}
+
+/* About Section */
+#about {
+    padding: 4rem 1rem;
+    text-align: center;
+    background: linear-gradient(120deg, #ff6f61, #fca311);
+    color: #fff;
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.profile-image:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Projects Section */
+#projects {
+    background: linear-gradient(to bottom, #181818, #000);
+    color: #f5f5f5;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #ff6f61;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Project Card Styling */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: 500px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.3), rgba(0, 200, 255, 0.3));
+    mix-blend-mode: screen;
+    opacity: 0.7;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ff6f61;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    padding: 2rem;
+    text-align: center;
+    color: #aaa;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #ff6f61; }
+}
+
+.typing-effect::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-text {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start from below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+.fade-in {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+/* Logo Bubbles */
+.logo-bubbles {
+    position: absolute; /* Position relative to the projects section */
+    top: 20%; /* Adjust this value to position it vertically */
+    right: 5%; /* Adjust this value to position it horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between the bubbles */
+    z-index: 5; /* Ensure it appears above the background */
+}
+
+.logo {
+    width: 60px; /* Set the size of the logos */
+    height: 60px; /* Set the size of the logos */
+    border-radius: 50%; /* Make them circular */
+    background-color: rgba(255, 255, 255, 0.1); /* Add a slight background */
+    padding: 10px; /* Add some padding */
+    transition: transform 0.3s; /* Add a transition for hover effect */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
