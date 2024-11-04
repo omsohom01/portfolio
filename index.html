@@ -8,6 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional CSS for the orange number */
+        .contact-number {
+            color: orange;
+            font-weight: bold;
+        }
+        /* CSS for social media buttons */
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align to the right */
+            margin-top: 20px; /* Space above the buttons */
+            gap: 10px; /* Space between buttons */
+        }
+        .social-button {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0; /* Light background for buttons */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .social-button img {
+            width: 20px; /* Size of icons */
+            height: 20px; /* Size of icons */
+            margin-left: 8px; /* Space between text and icon */
+        }
+        .social-button:hover {
+            background-color: #ddd; /* Change background on hover */
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -45,10 +81,10 @@
         <div class="project-card">
             <a href="project1.html" style="text-decoration: none; color: inherit;">
                 <h3>Project One</h3>
-                <p>An innovative website that helps people while they have emergencies. </p>
+                <p>An innovative website that helps people while they have emergencies.</p>
             </a>
         </div>
-        <a href="project1.html" class="btn visit-btn">Visit Here</a> <!-- Button moved outside -->
+        <a href="project1.html" class="btn visit-btn">Visit Project 1</a>
         
         <div class="project-card">
             <a href="project2.html" style="text-decoration: none; color: inherit;">
@@ -56,7 +92,7 @@
                 <p>An innovative food delivery website</p>
             </a>
         </div>
-        <a href="project2.html" class="btn visit-btn">Visit Here</a> <!-- Button moved outside -->
+        <a href="project2.html" class="btn visit-btn">Visit Project 2</a>
         
         <!-- Logo Bubbles Background -->
         <div class="logo-bubbles">
@@ -77,8 +113,21 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Let's work together! Reach out to me for collaborations, project inquiries, or just to say hi!</p>
-        <a href="mailto:omsohom01@gmail.com" class="btn">Send Email</a>
+        <p class="contact-number">Phone: 9836444455</p>
     </section>
+
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://x.com/omsohom01" target="_blank" class="social-button">Connect me on X
+            <img src="images/x.png" alt="X" />
+        </a>
+        <a href="https://github.com/omsohom01" target="_blank" class="social-button">Connect me on GitHub
+            <img src="images/github.png" alt="GitHub" />
+        </a>
+        <a href="https://www.linkedin.com/in/sohom-roy-9a9852291/" target="_blank" class="social-button">Connect me on LinkedIn
+            <img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer>
