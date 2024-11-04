@@ -43,6 +43,26 @@
         .social-button:hover {
             background-color: #ddd; /* Change background on hover */
         }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px; /* Space above footer */
+        }
+        .email-button {
+            background-color: red; /* Red button */
+            color: white; /* Text color */
+            padding: 10px 15px; /* Padding */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor */
+            text-decoration: none; /* No underline */
+            transition: background-color 0.3s; /* Transition effect */
+            font-weight: bold; /* Bold text */
+        }
+        .email-button:hover {
+            background-color: darkred; /* Darker red on hover */
+        }
     </style>
 </head>
 <body>
@@ -116,17 +136,21 @@
         <p class="contact-number">Phone: 9836444455</p>
     </section>
 
-    <!-- Social Media Buttons -->
-    <div class="social-buttons">
-        <a href="https://x.com/omsohom01" target="_blank" class="social-button">Connect me on X
-            <img src="images/x.png" alt="X" />
-        </a>
-        <a href="https://github.com/omsohom01" target="_blank" class="social-button">Connect me on GitHub
-            <img src="images/github.png" alt="GitHub" />
-        </a>
-        <a href="https://www.linkedin.com/in/sohom-roy-9a9852291/" target="_blank" class="social-button">Connect me on LinkedIn
-            <img src="images/linkedin.png" alt="LinkedIn" />
-        </a>
+    <!-- Footer with Email Button and Social Media Buttons -->
+    <div class="footer-container">
+        <a href="mailto:omsohom01@gmail.com" class="email-button">Email Me</a> <!-- Add your email here -->
+        
+        <div class="social-buttons">
+            <a href="https://x.com/omsohom01" target="_blank" class="social-button">Connect me on X
+                <img src="images/x.png" alt="X" />
+            </a>
+            <a href="https://github.com/omsohom01" target="_blank" class="social-button">Connect me on GitHub
+                <img src="images/github.png" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/sohom-roy-9a9852291/" target="_blank" class="social-button">Connect me on LinkedIn
+                <img src="images/linkedin.png" alt="LinkedIn" />
+            </a>
+        </div>
     </div>
 
     <!-- Footer -->
