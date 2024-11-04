@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surakshit - Project 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('images/background.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            color: #e6e6e6;
+            overflow-x: hidden;
+            min-height: 100vh; /* Ensure full height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
 
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+            border-radius: 10px;
+            padding: 2rem;
+            max-width: 800px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff6f61; /* Orange color for the heading */
+        }
+
+        .description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .links {
+            margin-top: 1.5rem;
+        }
+
+        .link {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .link:hover {
+            color: #fca311;
+        }
+
+        /* Fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image styling */
+        .hackathon-image,
+        .webify-image { /* Combine classes for consistent styling */
+            width: 100%; /* Make the image responsive */
+            max-width: 600px; /* Limit maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+            margin: 1rem 0; /* Margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Food Delivery Website</h1>
+        <div class="description">
+            <p class="fade-in">It is a website for ordering foods from the canteen of colleges.</p>
+            <p class="fade-in">Students can order their favourite foods from their classroom.</p>
+            <p class="fade-in">The student has to submit his/her name, college roll, department, etc., to place an order.</p>
+            <p class="fade-in">I secured the junior champion position in the Webify event organized by RCCIIT by creating this website.</p>
+            <img src="images/webify.jpg" alt="Webify" class="webify-image"> <!-- Added image -->
+        </div>
+        <div class="links">
+            <a href="https://github.com/omsohom01/food_ordering_app" target="_blank" class="link">GitHub Repository</a>
+            <br>
+            <a href="https://food-ordering-app-1-hqk1.onrender.com" target="_blank" class="link">Visit Website</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            fadeInElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 1000); // Adjust the delay here (1000ms = 1 second)
+            });
+        });
+    </script>
+</body>
+</html>
